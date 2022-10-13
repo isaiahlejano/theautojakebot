@@ -1,0 +1,111 @@
+:root{
+    --rootbackground: rgba(34, 40, 49, 1);
+    --rootcolor: rgba(232, 232, 232, 1);
+    font-size: 16px;
+}
+
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: var(--rootbackground);
+    color: var(--rootcolor);
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    color: var(--rootcolor);
+    font-size: 1rem;
+    transition: 0.3s all linear;
+}
+
+h1, h2, h3, h4, h5, p.font-alt{
+    font-family: 'Playfair Display', serif;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 320px;
+    position: relative;
+}
+
+.wrapper.active{
+    display: block;
+}
+
+.wrapper.inactive{
+    display: none;
+}
+
+.wrapper > *,
+.wrapper > .inner_wrapper > *{
+    display: block;
+    margin: 2rem 0;
+}
+
+.wrapper.twitch_input{
+    z-index: 1;    
+}
+
+.wrapper.speech_div{
+    z-index: 0;
+}
+
+input, button{
+    cursor: pointer;
+}
+
+input[type="textbox"].twitch_username{
+    --buttonheight: 3rem;
+    background: rgba(232, 232, 232, 1);
+    color: black;
+    width: calc( 100% - ( var(--buttonheight) * 2 ) );
+    height: var(--buttonheight);
+    border: 0;
+    outline: 0;
+    border-radius: calc( var(--buttonheight) / 2 );
+    font-size: .75rem;
+    padding: 0 var(--buttonheight);
+}
+
+button{
+    --buttonheight: 3rem;
+    width: 100%;
+    height: var(--buttonheight);
+    border: 0;
+    outline: 0;
+    border-radius: calc( var(--buttonheight) / 2 );
+    background: rgba(48, 71, 94, 0.25);
+    font-size: .75rem;
+}
+
+button#initialize._listening,
+button:hover{
+    background: rgba(48, 71, 94, 0.85);
+}
+
+button#initialize:before{
+    content: "⚫ Start ";
+}
+
+button#initialize._listening:before{
+    content: "🔴 Currently ";
+}
+
+div.speech_recognize,
+div.speech_response{
+    --boxpadding: 1rem;
+    background: rgba(232, 232, 232, 1);
+    color: black;
+    width: calc( 100% - ( var(--boxpadding) * 2 ) );
+    height: 9rem;
+    padding: var(--boxpadding);
+}
