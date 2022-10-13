@@ -44,13 +44,13 @@ recognition.addEventListener('result', (e) =>{
         // if(text.includes("shout")&&text.includes("out")&&text.includes("for me")){
         //     DOMFormat(speechResponseContainer, document.createTextNode("!so jakenjil"));
         // }
-        if(text.includes("pull up")&&text.includes("discord")){
+        if(text.includes("open")&&text.includes("discord")){
             DOMFormat(speechResponseContainer, document.createTextNode("!discord"));
         }
-        if(text.includes("pull up")&&text.includes("my")&&text.includes("social")){
+        if(text.includes("show")&&text.includes("my")&&text.includes("social")){
             DOMFormat(speechResponseContainer, document.createTextNode("!socials"));
         }
-        if(text.includes("pull up")&&text.includes("my")&&text.includes("socials")){
+        if(text.includes("show")&&text.includes("my")&&text.includes("socials")){
             DOMFormat(speechResponseContainer, document.createTextNode("!socials"));
         }
         if(text.includes("show")&&text.includes("my")&&text.includes("party")){
