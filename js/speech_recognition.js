@@ -9,7 +9,17 @@ function displayRecognizer(){
     speechdivContainer.classList.remove("inactive");
     twitchinputContainer.classList.add("inactive");
     speechdivContainer.classList.add("active");
-    console.log("https://twitch.com/" + twitch_username.value);
+    console.log(UrlExists("https://twitch.com/" + twitch_username.value));
+}
+
+function UrlExists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    if (http.status != 404)
+        return true;
+    else
+        return false;
 }
 
 var initialize = document.getElementById('initialize');
